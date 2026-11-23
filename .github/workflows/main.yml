@@ -1,7 +1,7 @@
 name: Run Bot
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   run-bot:
@@ -22,5 +22,5 @@ jobs:
 
       - name: Run bot.py
         env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}⁠
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         run: python bot.py
